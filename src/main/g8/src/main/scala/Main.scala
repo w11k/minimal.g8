@@ -1,9 +1,9 @@
 package $organization$
 
 /**
-  * Main class for $name$.
+  * Runner for $name$.
   */
-class Main {
+object Main {
 
   def main(args: Array[String]) {
     println("Welcome to $name$!")

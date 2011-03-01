@@ -1,6 +1,6 @@
 import sbt._
 
-class MyProject(info: ProjectInfo) extends DefaultProject(info) {
+class Project(info: ProjectInfo) extends DefaultProject(info) {
 
   // Compile dependencies
 
