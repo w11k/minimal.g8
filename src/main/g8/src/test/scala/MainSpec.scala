@@ -1,6 +1,6 @@
 package $organization$
 
-import java.io._
+import java.io.ByteArrayOutputStream
 import org.specs2._
 
 /**
@@ -14,14 +14,10 @@ class MainSpec extends Specification { def is =
     "print 'Welcome to $name$!\n' to System.out"                               ! printWelcome
 
   def printWelcome = {
-    val oldOut = System.out
-    try {
-      val bytes = new ByteArrayOutputStream
-      System.setOut(new PrintStream(bytes))
+    val bytes = new ByteArrayOutputStream
+    Console.withOut(bytes) {
       Main.main(null)
-      bytes.toString must_== "Welcome to $name$!\n"
-    } finally {
-      System.setOut(oldOut)
+      bytes.toString must_== "Welcome to myproject!\n"
     }
   }
 }
