@@ -17,7 +17,7 @@ class MainSpec extends Specification { def is =
     val bytes = new ByteArrayOutputStream
     Console.withOut(bytes) {
       Main.main(null)
-      bytes.toString must_== "Welcome to myproject!\n"
+      bytes.toString must_== "Welcome to $name$!\n"
     }
   }
 }
