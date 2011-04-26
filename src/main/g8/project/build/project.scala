@@ -11,7 +11,7 @@ class Project(info: ProjectInfo) extends DefaultProject(info) {
   // Test dependencies
   val mockito = "org.mockito" % "mockito-all" % "1.8.5" % "test"
   val scalaCheck = "org.scala-tools.testing" %% "scalacheck" % "1.9-SNAPSHOT" % "test"
-  val specs2 = "org.specs2" %% "specs2" % "1.1" % "test"
+  val specs2 = "org.specs2" %% "specs2" % "1.2" % "test"
 
   // Test frameworks
   def specs2Framework = new TestFramework("org.specs2.runner.SpecsFramework")
